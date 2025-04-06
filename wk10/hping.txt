@@ -1,0 +1,25 @@
+samramantej@comp3134-Winter2025:~$ sudo hping3 -c 5 -S 192.168.1.1
+[sudo] password for samramantej:
+HPING 192.168.1.1 (eth0 192.168.1.1): S set, 40 headers + 0 data bytes
+
+--- 192.168.1.1 hping statistic ---
+5 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+samramantej@comp3134-Winter2025:~$ sudo hping3 -c 9000 --udp -i u10000 -a 192.168.50.50 192.168.1.1
+HPING 192.168.1.1 (eth0 192.168.1.1): udp mode set, 28 headers + 0 data bytes
+
+--- 192.168.1.1 hping statistic ---
+9000 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+samramantej@comp3134-Winter2025:~$ sudo hping3 -c 11000 --icmp -d 1024 -i u13333 192.168.1.1
+HPING 192.168.1.1 (eth0 192.168.1.1): icmp mode set, 28 headers + 1024 data bytes
+ICMP Network Unreachable from ip=143.244.224.45 name=UNKNOWN
+ICMP Network Unreachable from ip=143.244.224.45 name=UNKNOWN
+ICMP Network Unreachable from ip=143.244.224.45 name=UNKNOWN
+ICMP Network Unreachable from ip=143.244.224.45 name=UNKNOWN
+ICMP Network Unreachable from ip=143.244.224.45 name=UNKNOWN
+^C
+--- 192.168.1.1 hping statistic ---
+1538 packets transmitted, 5 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+samramantej@comp3134-Winter2025:~$nano directory_traversal_part1.php
